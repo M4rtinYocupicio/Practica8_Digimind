@@ -1,4 +1,3 @@
 package com.example.mydigimind_yocupiciomartin.ui
 
-class Task {
-}
+data class Task(var title: String, var days: ArrayList<String>, var time: String)
