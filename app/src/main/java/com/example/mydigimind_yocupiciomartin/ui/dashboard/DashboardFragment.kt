@@ -22,9 +22,9 @@ class DashboardFragment : Fragment() {
     ): View? {
         dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        dashboardViewModel.text.observe(viewLifecycleOwner, {
 
-        })
+        val btn_time = root.findViewById(R.id.btn_time)
+
         return root
     }
 }

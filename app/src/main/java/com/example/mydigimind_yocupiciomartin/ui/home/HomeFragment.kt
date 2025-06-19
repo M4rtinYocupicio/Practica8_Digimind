@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.GridView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
@@ -16,6 +17,8 @@ import com.example.mydigimind_yocupiciomartin.ui.Task
 
 class HomeFragment : Fragment() {
     var tasks = ArrayList<Task>()
+    private var adaptador: AdaptadorTareas? = null
+
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
@@ -25,7 +28,15 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
+
         fillTasks()
+
+        adaptador = AdaptadorTareas(root.context, tasks)
+
+        val gridView: GridView = root.findViewById(R.id.gridView)
+
+        gridView.adapter = adaptador
+
         return root
     }
 
