@@ -64,6 +64,16 @@ class HomeFragment : Fragment() {
             var task = tasks[p0]
             var inflador = LayoutInflater.from(contexto)
             var vista = inflador.inflate(R.layout.task_view, null)
+
+            var tv_title: TextView = vista.findViewById(R.id.tv_title)
+            var tv_time: TextView = vista.findViewById(R.id.tv_time)
+            var tv_days: TextView = vista.findViewById(R.id.tv_days)
+
+            tv_title.setText(task.title)
+            tv_time.setText(task.time)
+            tv_days.setText(task.days.toString())
+
+            return vista
         }
     }
 }
