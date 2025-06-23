@@ -32,6 +32,7 @@
                 android:text="What do you want to remember to do" />
 
             <EditText
+                android:id="@+id/et_task"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Take your pill"
@@ -57,6 +58,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkMonday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
@@ -71,6 +73,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkTuesday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
@@ -85,6 +88,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkWednesday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
@@ -99,6 +103,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkThursday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
@@ -113,6 +118,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkFriday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
@@ -127,6 +133,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkSaturday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
@@ -141,6 +148,7 @@
                         />
 
                     <CheckBox
+                        android:id="@+id/checkSunday"
                         android:layout_width="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_height="wrap_content"/>
