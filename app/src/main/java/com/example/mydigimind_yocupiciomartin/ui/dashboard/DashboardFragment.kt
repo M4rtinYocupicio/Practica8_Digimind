@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -21,9 +22,9 @@ class DashboardFragment : Fragment() {
         savedInsanceState: Bundle?
     ): View? {
         dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
-        val btn_time = root.findViewById(R.id.btn_time)
+        val btn_time: Button = root.findViewById(R.id.btn_time)
 
         return root
     }
