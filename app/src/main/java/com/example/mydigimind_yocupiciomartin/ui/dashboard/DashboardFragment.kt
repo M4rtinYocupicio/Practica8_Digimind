@@ -9,9 +9,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.mydigimind_yocupiciomartin.R
+import com.example.mydigimind_yocupiciomartin.ui.home.HomeFragment
+import com.google.android.gms.gcm.Task
 import com.google.android.material.circularreveal.CircularRevealHelper.Strategy
 import java.text.SimpleDateFormat
 
@@ -72,8 +75,11 @@ class DashboardFragment : Fragment() {
             if(checkSunday.isChecked)
                 days.add("Sunday")
 
-            var task = Task(title, days, time)
+            var task = com.example.mydigimind_yocupiciomartin.ui.Task(title, days, time)
 
+            HomeFragment.tasks.add(task)
+
+            Toast.makeText(root.context, "new task added", Toast.LENGTH_SHORT).show()
 
         }
 

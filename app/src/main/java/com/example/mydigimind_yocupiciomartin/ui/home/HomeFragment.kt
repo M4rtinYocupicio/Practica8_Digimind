@@ -16,10 +16,13 @@ import com.example.mydigimind_yocupiciomartin.databinding.FragmentHomeBinding
 import com.example.mydigimind_yocupiciomartin.ui.Task
 
 class HomeFragment : Fragment() {
-    var tasks = ArrayList<Task>()
     private var adaptador: AdaptadorTareas? = null
-
     private lateinit var homeViewModel: HomeViewModel
+
+    companion object{
+        var tasks = ArrayList<Task>()
+        var first = true
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,7 +32,11 @@ class HomeFragment : Fragment() {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
-        fillTasks()
+        if(first){
+            fillTasks()
+            first = false
+        }
+
 
         adaptador = AdaptadorTareas(root.context, tasks)
 
